@@ -1,10 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".ui.pembayaran.PembayaranActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 1. Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="Detail Pembayaran" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- 2. Konten yang bisa di-scroll -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <!-- Kartu Informasi Mahasiswa -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_student_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/tv_student_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
+                        android:textStyle="bold"
+                        tools:text="Nama Mahasiswa" />
+
+                    <TextView
+                        android:id="@+id/tv_npm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?attr/textAppearanceBodyMedium"
+                        android:textColor="?android:attr/textColorSecondary"
+                        tools:text="123456789" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Kartu Detail Pembayaran Saat Ini -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_payment_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="@id/card_student_info"
+                app:layout_constraintStart_toStartOf="@id/card_student_info"
+                app:layout_constraintTop_toBottomOf="@id/card_student_info">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:stretchColumns="1">
+
+                    <TableRow>
+                        <TextView android:text="Golongan UKT" android:paddingEnd="16dp"/>
+                        <TextView android:id="@+id/tv_ukt_category" android:textStyle="bold" tools:text="Golongan 3" />
+                    </TableRow>
+                    <TableRow android:layout_marginTop="8dp">
+                        <TextView android:text="Jumlah" android:paddingEnd="16dp"/>
+                        <TextView android:id="@+id/tv_amount" android:textStyle="bold" tools:text="Rp 3.500.000" />
+                    </TableRow>
+                    <TableRow android:layout_marginTop="8dp">
+                        <TextView android:text="Tgl. Bayar" android:paddingEnd="16dp"/>
+                        <TextView android:id="@+id/tv_payment_date" android:textStyle="bold" tools:text="20 Desember 2025" />
+                    </TableRow>
+                    <TableRow android:layout_marginTop="8dp">
+                        <TextView android:text="Metode" android:paddingEnd="16dp"/>
+                        <TextView android:id="@+id/tv_payment_method" android:textStyle="bold" tools:text="Transfer Bank BNI" />
+                    </TableRow>
+                    <TableRow android:layout_marginTop="8dp">
+                        <TextView android:text="Status" android:paddingEnd="16dp"/>
+                        <TextView android:id="@+id/tv_payment_status" android:textColor="@color/success" android:textStyle="bold" tools:text="LUNAS" />
+                    </TableRow>
+                </TableLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Tombol Cetak Bukti -->
+            <Button
+                android:id="@+id/btn_print_receipt"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Cetak Bukti Pembayaran"
+                app:icon="@drawable/ic_print"
+                app:layout_constraintEnd_toEndOf="@id/card_payment_details"
+                app:layout_constraintStart_toStartOf="@id/card_payment_details"
+                app:layout_constraintTop_toBottomOf="@id/card_payment_details" />
+
+            <!-- Judul Riwayat Pembayaran -->
+            <TextView
+                android:id="@+id/tv_history_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Riwayat Pembayaran"
+                android:textAppearance="?attr/textAppearanceTitleMedium"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/btn_print_receipt"
+                app:layout_constraintTop_toBottomOf="@id/btn_print_receipt" />
+
+            <!-- Daftar Riwayat Pembayaran -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_payment_history"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_history_title"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_payment_history" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

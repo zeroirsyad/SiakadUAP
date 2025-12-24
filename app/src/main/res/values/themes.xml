@@ -1,11 +1,44 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+
+    <!-- ==================================================================== -->
+    <!-- Base application theme (MATERIAL 3) - INI YANG KITA LENGKAPI -->
+    <!-- ==================================================================== -->
     <style name="Base.Theme.Siakad" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- Warna Utama -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/primary_light</item>
+        <item name="colorOnPrimaryContainer">@color/primary_dark</item>
+
+        <!-- Warna Sekunder -->
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/primary_light</item> <!-- Atau warna lain yg cocok -->
+        <item name="colorOnSecondaryContainer">@color/text_primary</item>
+
+        <!-- Warna Background & Surface (Ini akan memperbaiki crash) -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorOutline">@color/outline</item>
+
+        <!-- Warna Status -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/white</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:windowLightStatusBar">false</item>
     </style>
 
     <style name="Theme.Siakad" parent="Base.Theme.Siakad" />
+
+
+    <!-- ==================================================================== -->
+    <!-- TEMA LAMA (MATERIAL 2) - TIDAK SAYA UBAH SAMA SEKALI               -->
+    <!-- ==================================================================== -->
     <style name="Theme.SiakadUAP" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary_dark</item>

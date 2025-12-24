@@ -10,6 +10,8 @@
     <string name="login">Login</string>
     <string name="forgot_password">Lupa Password?</string>
 
+    <!-- Register -->
+    <string name="register">Register"</string>
     <!-- Bottom Navigation -->
     <string name="dashboard">Dashboard</string>
     <string name="notifications">Notifikasi</string>
@@ -39,12 +41,53 @@
     <string name="notification_icon">Icon Notifikasi</string>
     <string name="no_notifications">Tidak ada notifikasi</string>
 
+
+
     <!-- Messages -->
     <string name="login_success">Login berhasil!</string>
     <string name="login_failed">Login gagal. Periksa NPM dan Password Anda.</string>
     <string name="logout_confirmation">Apakah Anda yakin ingin keluar?</string>
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
+
+
+    <!-- Additional strings -->
+    <string name="lecturer">Dosen</string>
+    <string name="room">Ruangan</string>
+    <string name="info_icon">Ikon Info</string>
+    <string name="present">Hadir</string>
+    <string name="excused">Izin</string>
+    <string name="sick">Sakit</string>
+    <string name="absent">Alpa</string>
+    <string name="payment_status">Status Pembayaran</string>
+
+
+    <!-- Course related -->
+    <string name="course_name">Nama Mata Kuliah</string>
+    <string name="course_code">Kode MK</string>
+    <string name="credits">SKS</string>
+    <string name="grade">Nilai</string>
+
+    <!-- Schedule -->
+    <string name="schedule_today">Jadwal Hari Ini</string>
+    <string name="no_schedule">Tidak ada jadwal</string>
+
+    <!-- Grades -->
+    <string name="gpa">IPK</string>
+    <string name="semester_gpa">IP Semester</string>
+    <string name="total_credits">Total SKS</string>
+
+    <!-- Payment -->
+    <string name="payment_receipt">Bukti Pembayaran</string>
+    <string name="payment_history">Riwayat Pembayaran</string>
+    <string name="tuition_fee">Biaya UKT</string>
+
+    <!-- Attendance -->
+    <string name="attendance_percentage">Persentase Kehadiran</string>
+    <string name="scan_qr">Scan QR Code</string>
+    <string name="attendance_summary">Ringkasan Kehadiran</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

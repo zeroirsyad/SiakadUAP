@@ -28,9 +28,7 @@
         <activity
             android:name=".ui.absensi.AbsensiActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.absensi.Absensi"
-            android:exported="false" />
+
         <activity
             android:name=".ui.khs.KhsActivity"
             android:exported="false" /> <!-- Splash Screen Activity (Satu-satunya LAUNCHER) -->

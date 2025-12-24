@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Warna identitas Universitas Aisyah Pringsewu -->
-    <color name="primary">#1E88E5</color>
-    <color name="primary_dark">#1565C0</color>
+    <!-- Warna identitas Universitas Aisyah Pringsewu (TIDAK DIUBAH) -->
+    <color name="primary">#1E88E5</color>    <color name="primary_dark">#1565C0</color>
     <color name="primary_light">#64B5F6</color>
     <color name="accent">#FF9800</color>
 
-    <!-- Background & Surface -->
+    <!-- ========================================================== -->
+    <!-- TAMBAHKAN WARNA-WARNA YANG HILANG DI SINI                  -->
+    <!-- ========================================================== -->
+    <color name="white">#FFFFFF</color>
+    <color name="surface_variant">#E0E0E0</color> <!-- Warna untuk background yang sedikit beda -->
+    <color name="outline">#BDBDBD</color>       <!-- Warna untuk garis tepi komponen -->
+    <!-- ========================================================== -->
+
+    <!-- Background & Surface (TIDAK DIUBAH) -->
     <color name="background">#F5F5F5</color>
     <color name="surface">#FFFFFF</color>
 
-    <!-- Text Colors -->
+    <!-- Text Colors (TIDAK DIUBAH) -->
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
     <color name="text_tertiary">#BDBDBD</color>
 
-    <!-- Status Colors -->
+    <!-- Status Colors (TIDAK DIUBAH) -->
     <color name="success">#4CAF50</color>
     <color name="warning">#FF9800</color>
     <color name="error">#F44336</color>

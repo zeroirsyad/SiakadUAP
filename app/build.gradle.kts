@@ -28,6 +28,7 @@ android {
         }
     }
 
+
     buildFeatures {
         viewBinding = true // Tambahkan ViewBinding
     }
@@ -76,6 +77,7 @@ dependencies {
     // DataStore
     implementation("androidx.datastore:datastore-preferences:1.0.0")
     implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
     // Room Database (Opsional - untuk offline storage)
     // implementation("androidx.room:room-runtime:2.6.1")
     // implementation("androidx.room:room-ktx:2.6.1")
