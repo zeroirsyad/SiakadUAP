@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header Profile -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/primary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="20dp"
+                android:gravity="center_vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/ic_profile_placeholder"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="@android:color/white"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="John Doe"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"/>
+
+                    <TextView
+                        android:id="@+id/tv_npm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NPM: 2021010001"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"
+                        android:layout_marginTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_prodi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Teknik Informatika"
+                        android:textSize="13sp"
+                        android:textColor="@android:color/white"
+                        android:layout_marginTop="2dp"/>
+
+                    <TextView
+                        android:id="@+id/tv_semester"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semester: 5"
+                        android:textSize="13sp"
+                        android:textColor="@android:color/white"
+                        android:layout_marginTop="2dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Menu Grid -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu Akademik"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:columnCount="2"
+            android:rowCount="3"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false">
+
+            <!-- KRS -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_krs"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_krs"
+                        android:contentDescription="@string/krs"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KRS"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rencana Studi"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="4dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- KHS -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_khs"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_khs"
+                        android:contentDescription="@string/khs"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KHS"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hasil Studi"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="4dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Absensi -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_absensi"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_absensi"
+                        android:contentDescription="@string/absensi"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Absensi"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kehadiran"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="4dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Pembayaran -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_payment"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_payment"
+                        android:contentDescription="@string/payment"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pembayaran"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Status UKT"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="4dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Info Akademik -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_info"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_info"
+                        android:contentDescription="@string/info"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Info"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pengumuman"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="4dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Jadwal -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_schedule"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_schedule"
+                        android:contentDescription="@string/schedule"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jadwal"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="12dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kuliah Hari Ini"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_secondary"
+                        android:layout_marginTop="4dp"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</ScrollView>
