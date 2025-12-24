@@ -53,11 +53,11 @@ class DashboardFragment : Fragment() {
             }
 
             cardAbsensi.setOnClickListener {
-                showToast("Fitur Absensi")
+                showToast("Fitur Present")
             }
 
             cardPayment.setOnClickListener {
-                showToast("Fitur Pembayaran")
+                showToast("Fitur Payment")
             }
 
             cardInfo.setOnClickListener {
@@ -65,7 +65,7 @@ class DashboardFragment : Fragment() {
             }
 
             cardSchedule.setOnClickListener {
-                showToast("Fitur Jadwal")
+                showToast("Fitur Schedule")
             }
         }
     }

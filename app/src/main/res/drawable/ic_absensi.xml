@@ -1,4 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
 
-</selector>
+    <!-- Bagian Papan/Board -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:pathData="M16,4h4v18H4V4h4" />
+
+    <!-- Bagian Penjepit Atas -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:pathData="M16,4V2H8v2" />
+
+    <!-- Bagian Kertas di Dalam -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:pathData="M16,6H8V4h8V6z" />
+
+    <!-- Garis Baris Absensi -->
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="square"
+        android:pathData="M10,12h4" />
+    <path
+        android:strokeColor="#000000"
+        android:strokeWidth="2"
+        android:strokeLineCap="square"
+        android:pathData="M10,16h4" />
+</vector>

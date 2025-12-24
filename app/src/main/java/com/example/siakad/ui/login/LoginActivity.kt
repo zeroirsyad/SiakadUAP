@@ -50,7 +50,7 @@ class LoginActivity : AppCompatActivity() {
                 // Simulasi sukses login
                 sessionManager.saveLoginSession(
                     npm = npm,
-                    name = "John Doe",
+                    name = "Irsyad Kadafi",
                     prodi = "Teknik Informatika",
                     semester = 5,
                     token = "dummy_token_123"
