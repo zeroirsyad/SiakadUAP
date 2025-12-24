@@ -9,7 +9,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.siakad.databinding.FragmentDashboardBinding
 import com.example.siakad.utils.SessionManager
-
+import android.content.Intent
+import com.example.siakad.ui.khs.KhsActivity
+import com.example.siakad.ui.krs.KrsActivity
 class DashboardFragment : Fragment() {
     private var _binding: FragmentDashboardBinding? = null
     private val binding get() = _binding!!
@@ -45,10 +47,12 @@ class DashboardFragment : Fragment() {
     private fun setupMenuClicks() {
         binding.apply {
             cardKrs.setOnClickListener {
+                val intent = Intent(requireContext(), KrsActivity::class.java)
                 showToast("Fitur KRS")
             }
 
             cardKhs.setOnClickListener {
+                val intent = Intent(requireContext(), KhsActivity::class.java)
                 showToast("Fitur KHS")
             }
 
